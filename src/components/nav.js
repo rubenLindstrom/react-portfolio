@@ -24,9 +24,21 @@ const Nav = () => {
       <div id="nav-content" className={open ? "open" : ""}>
         <ul>
           {/* TODO: Fix active class */}
-          <li className="active">Home</li>
-          <li>Portfolio</li>
-          <li>Contact</li>
+          <li className="active">
+            <Link onClick={() => setOpen(false)} to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link onClick={() => setOpen(false)} to="/#projects">
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link onClick={() => setOpen(false)} to="/contact">
+              Contact
+            </Link>
+          </li>
           <li>
             <SocialLinks />
           </li>
