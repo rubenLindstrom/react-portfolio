@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointLeft } from "@fortawesome/free-regular-svg-icons";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+// Components
 import Slider from "../components/slider";
+import { Banner, GoBack } from "../components/atoms";
 
+// Images
 import Birds from "../images/projects/birds.jpg";
 import bridge from "../images/projects/bridge.jpg";
 import f_beach from "../images/projects/f_beach.jpg";
@@ -60,20 +63,11 @@ const singleProject = props => {
 
   return (
     <>
-      <div
-        className="banner"
-        style={{
-          backgroundImage: `${bannerGradient}, url(${banner})`
-        }}
-      >
-        <div className="inner-wrapper">
-          <div className="go-back">
-            <FontAwesomeIcon icon={faHandPointLeft} /> Back to projects
-          </div>
-          <h2>{title}</h2>
-          <h3>{subtitle}</h3>
-        </div>
-      </div>
+      <Banner bg={`${bannerGradient}, url(${banner})`}>
+        <GoBack to="projects" path="/#projects" />
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+      </Banner>
       <div className="gray-section">
         <h2>A brand new look</h2>
         <p>{texts.intro}</p>
@@ -99,6 +93,14 @@ const singleProject = props => {
           <a>
             Next Project <FontAwesomeIcon icon={faArrowRight} />
           </a>
+        </div>
+        <div className="gray-section">
+          <button
+            id="hire-me-button"
+            className="button-primary inverted center"
+          >
+            Hire Me
+          </button>
         </div>
       </div>
     </>

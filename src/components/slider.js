@@ -6,17 +6,12 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const Slider = ({ slideDuration, slides, arrows }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  let interval;
-  const doSetInterval = () => {
-    interval = setInterval(() => {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
       setCurrentIndex(prevState => (prevState + 1) % slides.length);
     }, slideDuration);
-  };
-
-  useEffect(() => {
-    doSetInterval();
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearTimeout(timeout);
+  }, [currentIndex]);
 
   return (
     <div className="slider">
@@ -42,8 +37,6 @@ const Slider = ({ slideDuration, slides, arrows }) => {
             className={currentIndex === index ? "active" : ""}
             onClick={() => {
               setCurrentIndex(index);
-              clearInterval(interval);
-              doSetInterval();
             }}
           ></div>
         ))}

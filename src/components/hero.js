@@ -20,8 +20,8 @@ const hero = () => {
         I build beautiful <span className="rolling-text">{text}</span>
       </h2>
       <div className="buttons">
-        <button>View Portfolio</button>
-        <button>Hire Me</button>
+        <button className="button-primary">View Portfolio</button>
+        <button className="button-primary">Hire Me</button>
       </div>
     </div>
   );

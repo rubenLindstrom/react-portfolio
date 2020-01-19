@@ -1,16 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
 import Nav from "./components/nav";
-import Hero from "./components/hero";
-import Introduction from "./components/introduction";
-import ProjectGallery from "./components/projectGallery";
-import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 // Pages
 import SingleProject from "./pages/singleProject";
+import Contact from "./pages/contact";
+import NotFound from "./pages/notFound";
+import Home from "./pages/home";
 
 function App() {
   return (
@@ -18,19 +17,12 @@ function App() {
       <Router>
         <Nav />
         <div className="content-wrapper">
-          <Route
-            path="/"
-            exact
-            render={() => (
-              <>
-                <Hero />
-                <Introduction />
-                <ProjectGallery />
-                <Contact />
-              </>
-            )}
-          />
-          <Route path="/:project" exact component={SingleProject} />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/projects/:project" exact component={SingleProject} />
+            <Route path="/contact" exact component={Contact} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </Router>
       <Footer />

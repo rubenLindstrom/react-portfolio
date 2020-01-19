@@ -1,20 +1,15 @@
 import React from "react";
+import { ContactForm } from "./atoms";
 
 const contact = () => {
   return (
-    <div id="contact">
+    <div className="gray-section padded">
       <h2>Get in touch</h2>
       <p>
         Are you in need of a project, or are you looking for manpower? Get in
         touch! I'd be happy to discuss how we can help satisfy your needs.
       </p>
-      <form>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="text" name="email" placeholder="Email Address" />
-        <input type="text" name="budget" placeholder="Budget (Optional)" />
-        <textarea placeholder="Describe your project..."></textarea>
-        <button>Send Inquiry</button>
-      </form>
+      <ContactForm />
     </div>
   );
 };

@@ -26,7 +26,7 @@ a {
     font-size: 2rem;
     transition: color 0.2s ease;
     &:hover {
-      color: #ff177f;
+      color: $active;
       cursor: pointer;
     }
   }
