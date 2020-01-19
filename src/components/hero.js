@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import nature from "../images/nature.jpg";
 import hills from "../images/hills.jpg";
@@ -20,8 +21,12 @@ const hero = () => {
         I build beautiful <span className="rolling-text">{text}</span>
       </h2>
       <div className="buttons">
-        <button className="button-primary">View Portfolio</button>
-        <button className="button-primary">Hire Me</button>
+        <Link to="/#projects">
+          <button className="button-primary">View Portfolio</button>
+        </Link>
+        <Link to="/contact">
+          <button className="button-primary">Hire Me</button>
+        </Link>
       </div>
     </div>
   );

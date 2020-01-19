@@ -6,6 +6,7 @@
 @import "./_partials/slider";
 
 body {
+  scroll-behavior: smooth;
   margin: 0;
   font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
@@ -58,6 +59,7 @@ code {
   padding: 0.7rem 1.1rem;
   background-color: transparent;
   color: #fff;
+  outline: none;
 
   border: 2px solid #fff;
   font-size: 1.1rem;

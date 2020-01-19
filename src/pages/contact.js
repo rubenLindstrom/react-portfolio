@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { Banner, ContactForm } from "../components/atoms";
+import { Banner, ContactForm, GoBack } from "../components/atoms";
 
 import mountain from "../images/mountain.jpg";
 
@@ -11,6 +11,7 @@ const contact = () => (
       bg={`linear-gradient(135deg, rgba(145, 0, 217, .88), rgba(0, 182, 227, .82)), url(${mountain})`}
       slim
     >
+      <GoBack to="home" path="/" />
       <h1>Contact me</h1>
     </Banner>
     <div className="gray-section">
