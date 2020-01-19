@@ -1,35 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const SLIDE_DURATION = 4500;
+import Slider from "./slider.js";
 
-const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const backgroundClasses = ["nature", "hills", "mountains"];
+const hero = () => {
   const rollingTexts = [
     "full stack applications",
     "responsive websites",
     "user interfaces"
   ];
 
-  let interval;
-
-  const doSetInterval = () => {
-    interval = setInterval(() => {
-      setCurrentIndex(prevState => (prevState + 1) % backgroundClasses.length);
-    }, SLIDE_DURATION);
-  };
-
-  useEffect(() => {
-    doSetInterval();
-    return () => clearInterval(interval);
-  });
-
   const renderInnerText = text => (
     <div className="inner-wrapper">
       <h2>I'm Ruben.</h2>
       <h2>
-        I build beautiful <span class="rolling-text">{text}</span>
+        I build beautiful <span className="rolling-text">{text}</span>
       </h2>
       <div className="buttons">
         <button>View Portfolio</button>
@@ -37,54 +21,33 @@ const Hero = () => {
       </div>
     </div>
   );
+
+  const sliderSettings = {
+    slideDuration: 3500,
+    slides: [
+      {
+        bg:
+          "linear-gradient(135deg, rgba(222, 0, 63, 0.8),rgba(235, 74, 0, 0.8)),url('./images/nature.jpg')",
+        children: renderInnerText(rollingTexts[0])
+      },
+      {
+        bg:
+          "linear-gradient(135deg, rgba(148, 0, 222, 0.8),rgba(0, 176, 235, 0.8)),url('./images/hills.jpg')",
+        children: renderInnerText(rollingTexts[1])
+      },
+      {
+        bg:
+          "linear-gradient(135deg,  rgba(0, 222, 96, 0.8),rgba(0, 188, 235, 0.8)),url('./images/mountain.jpg')",
+        children: renderInnerText(rollingTexts[2])
+      }
+    ]
+  };
+
   return (
-    <div class="hero">
-      <div
-        className={`slide ${currentIndex === 0 ? "active" : ""}`}
-        id="slide-nature"
-      >
-        {renderInnerText(rollingTexts[0])}
-      </div>
-      <div
-        className={`slide ${currentIndex === 1 ? "active" : ""}`}
-        id="slide-hills"
-      >
-        {renderInnerText(rollingTexts[1])}
-      </div>
-      <div
-        className={`slide ${currentIndex === 2 ? "active" : ""}`}
-        id="slide-mountain"
-      >
-        {renderInnerText(rollingTexts[2])}
-      </div>
-      <div className="controllers">
-        <div
-          className={currentIndex === 0 ? "active" : ""}
-          onClick={() => {
-            setCurrentIndex(0);
-            clearInterval(interval);
-            doSetInterval();
-          }}
-        ></div>
-        <div
-          className={currentIndex === 1 ? "active" : ""}
-          onClick={() => {
-            setCurrentIndex(1);
-            clearInterval(interval);
-            doSetInterval();
-          }}
-        ></div>
-        <div
-          className={currentIndex === 2 ? "active" : ""}
-          onClick={() => {
-            setCurrentIndex(2);
-            clearInterval(interval);
-            doSetInterval();
-          }}
-        ></div>
-      </div>
+    <div className="hero">
+      <Slider {...sliderSettings} />
     </div>
   );
 };
 
-export default Hero;
+export default hero;

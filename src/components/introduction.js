@@ -4,7 +4,7 @@ import Technologies from "./technologies";
 
 const introduction = () => {
   return (
-    <div id="introduction">
+    <div className="gray-section">
       <h2>I can help</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac

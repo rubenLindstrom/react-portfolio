@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { SocialLinks } from "./atoms";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav>
       <div className="bar-wrapper">
-        <h1>littleweb</h1>
+        <Link to="/">
+          <h1>littleweb</h1>
+        </Link>
         <div
           id="hamburger"
           className={open ? "open" : ""}
@@ -26,10 +28,7 @@ const Nav = () => {
           <li>Portfolio</li>
           <li>Contact</li>
           <li>
-            <div id="social-icons">
-              <FontAwesomeIcon icon={faLinkedin} />
-              <FontAwesomeIcon icon={faGithub} />
-            </div>
+            <SocialLinks />
           </li>
         </ul>
       </div>

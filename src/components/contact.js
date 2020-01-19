@@ -9,14 +9,9 @@ const contact = () => {
         touch! I'd be happy to discuss how we can help satisfy your needs.
       </p>
       <form>
-        <input type="text" name="name" id="" placeholder="Name" />
-        <input type="text" name="email" id="" placeholder="Email Address" />
-        <input
-          type="text"
-          name="budget"
-          id=""
-          placeholder="Budget (Optional)"
-        />
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="email" placeholder="Email Address" />
+        <input type="text" name="budget" placeholder="Budget (Optional)" />
         <textarea placeholder="Describe your project..."></textarea>
         <button>Send Inquiry</button>
       </form>

@@ -29,8 +29,10 @@ const projectGallery = () => {
       <div className="projects-grid">
         {projects.map(({ img, name }) => (
           <a
+            key={name}
             href="#"
-            class="project"
+            className="project"
+            rel="noopener noreferrer"
             style={{ backgroundImage: `url(${img})` }}
           >
             <h3 className="project-title">{name}</h3>
