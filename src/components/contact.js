@@ -4,12 +4,14 @@ import { ContactForm } from "./atoms";
 const contact = () => {
   return (
     <div id="contact" className="gray-section padded">
-      <h2>Get in touch</h2>
-      <p>
-        Are you in need of a project, or are you looking for manpower? Get in
-        touch! I'd be happy to discuss how we can help satisfy your needs.
-      </p>
-      <ContactForm />
+      <div className="container">
+        <h2>Get in touch</h2>
+        <p>
+          Are you in need of a project, or are you looking for manpower? Get in
+          touch! I'd be happy to discuss how we can help satisfy your needs.
+        </p>
+        <ContactForm />
+      </div>
     </div>
   );
 };
