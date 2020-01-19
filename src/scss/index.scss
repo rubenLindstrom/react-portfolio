@@ -195,11 +195,11 @@ code {
   }
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: 100%;
+    // display: grid;
+    // grid-template-columns: 100%;
     .project {
       height: 280px;
-      display: block;
+      display: inline-block;
       background-size: cover;
       background-position: 50% 50%;
       text-decoration: none;
@@ -216,7 +216,7 @@ code {
 
       &::before {
         content: "";
-        display: block;
+        display: inline-block;
         position: absolute;
         top: 0;
         left: 0;
@@ -235,6 +235,23 @@ code {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .projects-grid .project {
+    &.quarter {
+      width: 25%;
+    }
+    &.third {
+      width: 33.33%;
+    }
+    &.half {
+      width: 50%;
+    }
+    &.two-thirds {
+      width: 66.66%;
     }
   }
 }

@@ -11,15 +11,15 @@ import sand from "../images/projects/sand.jpg";
 import sunrise from "../images/projects/sunrise.jpg";
 
 const projects = [
-  { img: birds, name: "Birds" },
-  { img: bridge, name: "bridge" },
-  { img: f_beach, name: "Beach" },
-  { img: fields, name: "fields" },
-  { img: lake, name: "lake" },
-  { img: oceans, name: "oceans" },
-  { img: rayban, name: "rayban" },
-  { img: sand, name: "sand" },
-  { img: sunrise, name: "sunrise" }
+  { img: birds, name: "Birds", widthClass: "quarter" },
+  { img: bridge, name: "bridge", widthClass: "half" },
+  { img: f_beach, name: "Beach", widthClass: "quarter" },
+  { img: fields, name: "fields", widthClass: "half" },
+  { img: lake, name: "lake", widthClass: "half" },
+  { img: oceans, name: "oceans", widthClass: "two-thirds" },
+  { img: rayban, name: "rayban", widthClass: "third" },
+  { img: sand, name: "sand", widthClass: "third" },
+  { img: sunrise, name: "sunrise", widthClass: "two-thirds" }
 ];
 
 const projectGallery = () => {
@@ -27,11 +27,11 @@ const projectGallery = () => {
     <div id="projects">
       <h2>My Projects</h2>
       <div className="projects-grid">
-        {projects.map(({ img, name }) => (
+        {projects.map(({ img, name, widthClass }) => (
           <a
             key={name}
             href={`/${name.toLowerCase()}`}
-            className="project"
+            className={`project ${widthClass}`}
             rel="noopener noreferrer"
             style={{ backgroundImage: `url(${img})` }}
           >
