@@ -15,6 +15,14 @@
     opacity: 0;
     z-index: 0;
     background-position: 0% 0%, 50% 50%;
+    display: flex;
+    align-items: center;
+
+    .inner-wrapper {
+      margin: 0 1rem;
+      color: #fff;
+      font-weight: 300;
+    }
 
     &.active {
       opacity: 1;
@@ -42,7 +50,7 @@
     }
   }
 
-  .controllers {
+  .controls {
     display: flex;
     justify-content: space-between;
     margin: 1rem auto;
@@ -64,6 +72,16 @@
         background-color: #fff;
       }
       transition: background-color 0.2s ease;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .slider {
+    .controls div {
+      width: 12px;
+      height: 12px;
+      margin: 0 6px;
     }
   }
 }

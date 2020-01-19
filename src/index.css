@@ -151,8 +151,20 @@ nav #nav-content ul li .social-links svg {
   opacity: 0;
   z-index: 0;
   background-position: 0% 0%, 50% 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
+}
+
+.slider .slide .inner-wrapper {
+  margin: 0 1rem;
+  color: #fff;
+  font-weight: 300;
 }
 
 .slider .slide.active {
@@ -185,7 +197,7 @@ nav #nav-content ul li .social-links svg {
   opacity: 1;
 }
 
-.slider .controllers {
+.slider .controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +213,7 @@ nav #nav-content ul li .social-links svg {
           transform: translateX(-50%);
 }
 
-.slider .controllers div {
+.slider .controls div {
   border-radius: 50%;
   height: 10px;
   width: 10px;
@@ -212,8 +224,16 @@ nav #nav-content ul li .social-links svg {
   transition: background-color 0.2s ease;
 }
 
-.slider .controllers div.active {
+.slider .controls div.active {
   background-color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .slider .controls div {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+  }
 }
 
 body {
@@ -230,6 +250,13 @@ code {
 
 .content-wrapper {
   margin-top: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: auto;
+  }
 }
 
 .center {
@@ -253,6 +280,12 @@ code {
 
 .gray-section p {
   color: dimgray;
+}
+
+@media only screen and (min-width: 768px) {
+  .gray-section {
+    padding: 5rem 10px;
+  }
 }
 
 .go-back {
@@ -279,6 +312,7 @@ code {
 }
 
 .button-primary:hover {
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.3);
   color: #000;
   border-color: #111;
@@ -294,12 +328,12 @@ code {
   border-color: #ff177f;
 }
 
-div.hero {
+.hero {
   height: 315px;
   position: relative;
 }
 
-div.hero::before {
+.hero::before {
   content: "";
   display: block;
   position: absolute;
@@ -310,24 +344,11 @@ div.hero::before {
   z-index: 1;
 }
 
-div.hero .inner-wrapper {
-  position: relative;
-  top: 3rem;
-  margin: 0 1rem;
-}
-
-div.hero .inner-wrapper h2 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-div.hero .inner-wrapper .rolling-text {
+.hero .rolling-text {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-div.hero .inner-wrapper .buttons {
+.hero .buttons {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,9 +357,29 @@ div.hero .inner-wrapper .buttons {
   margin-top: 2rem;
 }
 
-div.hero .inner-wrapper .buttons button {
+.hero .buttons button {
   display: inline-block;
   margin-right: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .introduction-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    margin-bottom: 5rem;
+  }
+  .introduction-wrapper p {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 #technologies {
@@ -347,6 +388,7 @@ div.hero .inner-wrapper .buttons button {
 
 #technologies h2 {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 #technologies .tech-grid {

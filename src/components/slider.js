@@ -30,7 +30,7 @@ const Slider = ({ slideDuration, slides, arrows }) => {
           {children}
         </div>
       ))}
-      <div className="controllers">
+      <div className="controls">
         {slides.map((_, index) => (
           <div
             key={index}
