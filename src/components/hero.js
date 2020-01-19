@@ -1,5 +1,9 @@
 import React from "react";
 
+import nature from "../images/nature.jpg";
+import hills from "../images/hills.jpg";
+import mountain from "../images/mountain.jpg";
+
 import Slider from "./slider.js";
 
 const hero = () => {
@@ -26,18 +30,15 @@ const hero = () => {
     slideDuration: 3500,
     slides: [
       {
-        bg:
-          "linear-gradient(135deg, rgba(222, 0, 63, 0.8),rgba(235, 74, 0, 0.8)),url('./images/nature.jpg')",
+        bg: `linear-gradient(135deg, rgba(222, 0, 63, 0.8),rgba(235, 74, 0, 0.8)),url(${nature})`,
         children: renderInnerText(rollingTexts[0])
       },
       {
-        bg:
-          "linear-gradient(135deg, rgba(148, 0, 222, 0.8),rgba(0, 176, 235, 0.8)),url('./images/hills.jpg')",
+        bg: `linear-gradient(135deg, rgba(148, 0, 222, 0.8),rgba(0, 176, 235, 0.8)),url(${hills})`,
         children: renderInnerText(rollingTexts[1])
       },
       {
-        bg:
-          "linear-gradient(135deg,  rgba(0, 222, 96, 0.8),rgba(0, 188, 235, 0.8)),url('./images/mountain.jpg')",
+        bg: `linear-gradient(135deg,  rgba(0, 222, 96, 0.8),rgba(0, 188, 235, 0.8)),url(${mountain})`,
         children: renderInnerText(rollingTexts[2])
       }
     ]

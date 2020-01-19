@@ -48,9 +48,13 @@ code {
   margin-top: 50px;
 }
 
-.gray-section {
+.padded {
   padding: 2rem 10px;
+}
+
+.gray-section {
   background-color: #ededed;
+  padding: 2rem 10px;
 }
 
 .gray-section h2 {
@@ -84,6 +88,31 @@ code {
 }
 
 .slider .slide.active {
+  opacity: 1;
+}
+
+.slider .navigation-arrows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  z-index: 2;
+  padding: 0 10px;
+  font-size: 1.3rem;
+}
+
+.slider .navigation-arrows svg {
+  opacity: 0.5;
+}
+
+.slider .navigation-arrows svg:hover {
   opacity: 1;
 }
 
@@ -477,16 +506,22 @@ div.hero .inner-wrapper .buttons button:hover {
   margin: 10px 0;
 }
 
-#project-gallery {
-  padding: 2rem 10px 2rem 10px;
+#project-gallery .projects-slider {
+  position: relative;
+  height: 250px;
+  margin-left: -10px;
 }
 
-#project-gallery .projects-slider {
-  width: 100%;
-  position: relative;
-  height: 200px;
-  width: 100vw;
-  margin-left: -10px;
+.projects-navigator div {
+  border-bottom: 1px solid #ededed;
+}
+
+.projects-navigator div a {
+  display: block;
+  padding: 3rem 0.75rem;
+  color: #bdbdbd;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 footer {

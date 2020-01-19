@@ -30,7 +30,7 @@ const projectGallery = () => {
         {projects.map(({ img, name }) => (
           <a
             key={name}
-            href="#"
+            href={`/${name.toLowerCase()}`}
             className="project"
             rel="noopener noreferrer"
             style={{ backgroundImage: `url(${img})` }}

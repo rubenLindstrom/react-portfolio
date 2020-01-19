@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointLeft } from "@fortawesome/free-regular-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import Slider from "../components/slider";
 
@@ -33,14 +34,21 @@ const projects = {
       {
         bg: `url(${lake})`
       }
-    ]
+    ],
+    texts: {
+      intro:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac cursus massa. Nullam et mi condimentum, convallis erat a, lobortis urna. Aliquam nec sodales metus. Duis in viverra velit, nec cursus ipsum. In hac habitasse platea dictumst. Vivamus ex leo, sollicitudin a orci sit amet, finibus faucibus urna. Cras magna odio, commodo a sem",
+      brief:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac cursus massa. Nullam et mi condimentum, convallis erat a, lobortis urna. Aliquam nec sodales metus. Duis in viverra velit, nec cursus ipsum. In hac habitasse platea dictumst. Vivamus ex leo, sollicitudin a orci sit amet, finibus faucibus urna. Cras magna odio, commodo a sem"
+    }
   }
 };
 
 const singleProject = props => {
   const projectKey = props.match.params.project;
 
-  const { title, subtitle, banner, bannerGradient, slides } = projects[
+  // TODO: Project not found
+  const { title, subtitle, banner, bannerGradient, slides, texts } = projects[
     projectKey
   ];
 
@@ -68,27 +76,29 @@ const singleProject = props => {
       </div>
       <div className="gray-section">
         <h2>A brand new look</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
-          cursus massa. Nullam et mi condimentum, convallis erat a, lobortis
-          urna. Aliquam nec sodales metus. Duis in viverra velit, nec cursus
-          ipsum. In hac habitasse platea dictumst. Vivamus ex leo, sollicitudin
-          a orci sit amet, finibus faucibus urna. Cras magna odio, commodo a sem
-        </p>
+        <p>{texts.intro}</p>
       </div>
       <div id="project-gallery">
-        <h2>Gallery</h2>
-        <h3>The brief</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
-          cursus massa. Nullam et mi condimentum, convallis erat a, lobortis
-          urna. Aliquam nec sodales metus. Duis in viverra velit, nec cursus
-          ipsum. In hac habitasse platea dictumst. Vivamus ex leo, sollicitudin
-          a orci sit amet, finibus faucibus urna. Cras magna odio, commodo a sem
-        </p>
-        <h3>Showcase</h3>
+        <div className="padded">
+          <h2>Gallery</h2>
+          <h3>The brief</h3>
+          <p>{texts.brief}</p>
+          <h3>Showcase</h3>
+        </div>
         <div className="projects-slider">
           <Slider {...sliderSettings} />
+        </div>
+      </div>
+      <div className="projects-navigator">
+        <div>
+          <a>
+            <FontAwesomeIcon icon={faArrowLeft} /> Prev Project
+          </a>
+        </div>
+        <div>
+          <a>
+            Next Project <FontAwesomeIcon icon={faArrowRight} />
+          </a>
         </div>
       </div>
     </>

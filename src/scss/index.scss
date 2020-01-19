@@ -20,9 +20,13 @@ code {
 }
 
 // === GENERAL ===
-.gray-section {
+.padded {
   padding: 2rem 10px;
+}
+
+.gray-section {
   background-color: #ededed;
+  padding: 2rem 10px;
 
   h2 {
     color: dimgray;
@@ -55,6 +59,25 @@ code {
       opacity: 1;
     }
     transition: opacity 0.5s ease;
+  }
+
+  .navigation-arrows {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 2;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    svg {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .controllers {
@@ -399,14 +422,22 @@ div.hero {
   }
 }
 #project-gallery {
-  padding: 2rem 10px 2rem 10px;
-
   .projects-slider {
-    width: 100%;
     position: relative;
-    height: 200px;
-    width: 100vw;
+    height: 250px;
     margin-left: -10px;
+  }
+}
+
+.projects-navigator div {
+  border-bottom: 1px solid #ededed;
+
+  a {
+    display: block;
+    padding: 3rem 0.75rem;
+    color: #bdbdbd;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
 }
 
