@@ -32,7 +32,7 @@ const hero = () => {
   );
 
   const sliderSettings = {
-    slideDuration: 3500,
+    slideDuration: 4500,
     slides: [
       {
         bg: `linear-gradient(135deg, rgba(222, 0, 63, 0.8),rgba(235, 74, 0, 0.8)),url(${nature})`,

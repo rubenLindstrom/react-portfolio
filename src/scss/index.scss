@@ -120,8 +120,10 @@ code {
     margin-top: 2rem;
 
     button {
+      background-color: rgba(255, 255, 255, 0.1);
       display: inline-block;
       margin-right: 14px;
+      border-radius: 30px;
     }
   }
 }
@@ -194,64 +196,74 @@ code {
     margin-left: 1rem;
   }
 
-  .projects-grid {
-    // display: grid;
-    // grid-template-columns: 100%;
-    .project {
-      height: 280px;
+  .project {
+    height: 280px;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50% 50%;
+    text-decoration: none;
+    position: relative;
+    float: left;
+
+    h3 {
+      color: #fff;
+      text-transform: capitalize;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 0 0 0 0.5rem;
+    }
+
+    &::before {
+      content: "";
       display: inline-block;
-      background-size: cover;
-      background-position: 50% 50%;
-      text-decoration: none;
-      position: relative;
-
-      h3 {
-        color: #fff;
-        text-transform: capitalize;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 0 0 0 0.5rem;
-      }
-
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+      background: linear-gradient(
+        135deg,
+        rgba(222, 0, 63, 0.6),
+        rgba(235, 74, 0, 0.6)
+      );
+    }
+    &:hover {
       &::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        opacity: 0;
-        transition: opacity 0.5s;
-        background: linear-gradient(
-          135deg,
-          rgba(222, 0, 63, 0.6),
-          rgba(235, 74, 0, 0.6)
-        );
-      }
-      &:hover {
-        &::before {
-          opacity: 1;
-        }
+        opacity: 1;
       }
     }
   }
 }
 
 @media only screen and (min-width: $tablet) {
-  .projects-grid .project {
-    &.quarter {
-      width: 25%;
+  #projects {
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
     }
-    &.third {
-      width: 33.33%;
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
     }
-    &.half {
-      width: 50%;
-    }
-    &.two-thirds {
-      width: 66.66%;
+
+    .project {
+      &.quarter {
+        width: 25%;
+      }
+      &.third {
+        width: 33.33%;
+      }
+      &.half {
+        width: 50%;
+      }
+      &.two-thirds {
+        width: 66.66%;
+      }
     }
   }
 }
@@ -358,9 +370,6 @@ code {
       color: #333;
     }
   }
-}
-
-#hire-me-button {
 }
 
 // === FOOTER ===

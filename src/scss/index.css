@@ -38,9 +38,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   z-index: 100;
 }
 
@@ -138,15 +135,6 @@ nav #nav-content ul li .social-links svg {
   margin-right: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
-  nav {
-    padding: 0 15%;
-  }
-  nav h1 {
-    font-size: 2rem;
-  }
-}
-
 .slider {
   position: absolute;
   top: 0;
@@ -242,10 +230,6 @@ nav #nav-content ul li .social-links svg {
 }
 
 @media only screen and (min-width: 768px) {
-  .slider .slide .inner-wrapper {
-    left: 10%;
-    position: relative;
-  }
   .slider .controls div {
     width: 12px;
     height: 12px;
@@ -466,17 +450,16 @@ code {
   margin-left: 1rem;
 }
 
-#projects .project {
+#projects .projects-grid .project {
   height: 280px;
   display: inline-block;
   background-size: cover;
   background-position: 50% 50%;
   text-decoration: none;
   position: relative;
-  float: left;
 }
 
-#projects .project h3 {
+#projects .projects-grid .project h3 {
   color: #fff;
   text-transform: capitalize;
   position: absolute;
@@ -485,7 +468,7 @@ code {
   padding: 0 0 0 0.5rem;
 }
 
-#projects .project::before {
+#projects .projects-grid .project::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -499,30 +482,21 @@ code {
   background: linear-gradient(135deg, rgba(222, 0, 63, 0.6), rgba(235, 74, 0, 0.6));
 }
 
-#projects .project:hover::before {
+#projects .projects-grid .project:hover::before {
   opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
-  #projects h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  #projects .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  #projects .project.quarter {
+  .projects-grid .project.quarter {
     width: 25%;
   }
-  #projects .project.third {
+  .projects-grid .project.third {
     width: 33.33%;
   }
-  #projects .project.half {
+  .projects-grid .project.half {
     width: 50%;
   }
-  #projects .project.two-thirds {
+  .projects-grid .project.two-thirds {
     width: 66.66%;
   }
 }
