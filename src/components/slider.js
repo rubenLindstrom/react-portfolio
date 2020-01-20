@@ -17,8 +17,20 @@ const Slider = ({ slideDuration, slides, arrows }) => {
     <div className="slider">
       {arrows && (
         <div className="navigation-arrows">
-          <FontAwesomeIcon icon={faArrowLeft} />
-          <FontAwesomeIcon icon={faArrowRight} />
+          <FontAwesomeIcon
+            onClick={() =>
+              setCurrentIndex(
+                prevState => (prevState + slides.length - 1) % slides.length
+              )
+            }
+            icon={faArrowLeft}
+          />
+          <FontAwesomeIcon
+            onClick={() =>
+              setCurrentIndex(prevState => (prevState + 1) % slides.length)
+            }
+            icon={faArrowRight}
+          />
         </div>
       )}
       {slides.map(({ bg, children }, index) => (

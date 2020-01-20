@@ -3,6 +3,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  height: max-content;
   z-index: 100;
   .bar-wrapper {
     background-color: #fff;
@@ -23,8 +24,10 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
+    cursor: pointer;
     div {
-      border: 2px solid #000;
+      border: 2px solid #222;
+      background-color: #222;
       border-radius: 4px;
     }
     &.open {
@@ -69,6 +72,16 @@ nav {
           margin-right: 1rem;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  nav {
+    padding: 0 15%;
+
+    h1 {
+      font-size: 2rem;
     }
   }
 }
