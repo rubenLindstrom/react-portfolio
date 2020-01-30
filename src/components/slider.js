@@ -47,9 +47,7 @@ const Slider = ({ slideDuration, slides, arrows }) => {
           <div
             key={index}
             className={currentIndex === index ? "active" : ""}
-            onClick={() => {
-              setCurrentIndex(index);
-            }}
+            onClick={() => setCurrentIndex(index)}
           ></div>
         ))}
       </div>

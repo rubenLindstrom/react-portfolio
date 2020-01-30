@@ -35,15 +35,27 @@ const hero = () => {
     slideDuration: 4500,
     slides: [
       {
-        bg: `linear-gradient(135deg, rgba(222, 0, 63, 0.8),rgba(235, 74, 0, 0.8)),url(${nature})`,
+        bg: `linear-gradient(
+          135deg,
+          rgba(222, 0, 63, 0.8),
+          rgba(235, 74, 0, 0.8)
+        ), url(${nature})`,
         children: renderInnerText(rollingTexts[0])
       },
       {
-        bg: `linear-gradient(135deg, rgba(148, 0, 222, 0.8),rgba(0, 176, 235, 0.8)),url(${hills})`,
+        bg: `linear-gradient(
+          135deg,
+          rgba(148, 0, 222, 0.8),
+          rgba(0, 176, 235, 0.8)
+        ), url(${hills})`,
         children: renderInnerText(rollingTexts[1])
       },
       {
-        bg: `linear-gradient(135deg,  rgba(0, 222, 96, 0.8),rgba(0, 188, 235, 0.8)),url(${mountain})`,
+        bg: `linear-gradient(
+          135deg,
+          rgba(0, 222, 96, 0.8),
+          rgba(0, 188, 235, 0.8)
+        ), url(${mountain})`,
         children: renderInnerText(rollingTexts[2])
       }
     ]
