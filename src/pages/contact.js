@@ -15,12 +15,14 @@ const contact = () => (
       <h1>Contact me</h1>
     </Banner>
     <div className="gray-section">
-      <h2>Get in touch</h2>
-      <p>
-        Let's work together! Submit your details in this form and I will get
-        back to you as soon as possible.
-      </p>
-      <ContactForm />
+      <div className="container">
+        <h2>Get in touch</h2>
+        <p>
+          Let's work together! Submit your details in this form and I will get
+          back to you as soon as possible.
+        </p>
+        <ContactForm />
+      </div>
     </div>
   </>
 );

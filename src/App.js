@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Switch, Route, withRouter } from "react-router-dom";
 
 // Components
 import Nav from "./components/nav";
@@ -11,23 +11,22 @@ import Contact from "./pages/contact";
 import NotFound from "./pages/notFound";
 import Home from "./pages/home";
 
-function App() {
+const App = props => {
+  useEffect(() => window.scrollTo(0, 0), [props.location.pathname]);
   return (
     <div className="App">
-      <Router>
-        <Nav />
-        <div className="content-wrapper">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/projects/:project" exact component={SingleProject} />
-            <Route path="/contact" exact component={Contact} />
-            <Route component={NotFound} />
-          </Switch>
-        </div>
-      </Router>
+      <Nav />
+      <div className="content-wrapper">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/projects/:project" exact component={SingleProject} />
+          <Route path="/contact" exact component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
       <Footer />
     </div>
   );
-}
+};
 
-export default App;
+export default withRouter(App);

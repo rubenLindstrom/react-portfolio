@@ -82,9 +82,6 @@ const projectGallery = () => {
             rel="noopener noreferrer"
             style={{ backgroundImage: `url(${bg})` }}
           >
-            {/* <div className="image-wrapper">
-              <img src={"st"} />
-            </div> */}
             <div className="project-labels">
               <h3 className="project-title">{title}</h3>
               <p className="project-subtitle">{subtitle}</p>
