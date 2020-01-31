@@ -1,5 +1,7 @@
 import React from "react";
 
+import TECHNOLOGIES from "./technologies";
+
 // Gradients
 const redOrange =
   "linear-gradient(135deg,rgba(222, 0, 63, 0.8),  rgba(235, 74, 0, 0.8))";
@@ -23,6 +25,7 @@ export default {
     bannerGradient: redOrange,
     slides: getImages("amitie", 4),
     link: "https://amitie.netlify.com/",
+    technologies: [TECHNOLOGIES.REACT, TECHNOLOGIES.STYLED_COMPONENTS],
     text: (
       <>
         <h2>Stunning graphics</h2>
@@ -42,8 +45,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://iare.one",
-    next: "https://soccio-e29bc.firebaseapp.com/"
+    prev: "/projects/iare",
+    next: "/projects/soccio"
   },
 
   castelli: {
@@ -53,6 +56,7 @@ export default {
     bannerGradient: purpleBlue,
     slides: getImages("castelli", 4),
     link: "https://castelli.se",
+    technologies: [TECHNOLOGIES.WORDPRESS, TECHNOLOGIES.PHP],
     text: (
       <>
         <h2>A brand new look</h2>
@@ -77,8 +81,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://rubenli-react-hotels.netlify.com/",
-    next: "https://n0llan.nu/"
+    prev: "/projects/resorts",
+    next: "/projects/n0llan"
   },
   ["dagen-i"]: {
     title: "Dagen I",
@@ -87,6 +91,7 @@ export default {
     bannerGradient: greenBlue,
     slides: getImages("dageni", 3),
     link: "https://dageni.se/",
+    technologies: [TECHNOLOGIES.WORDPRESS, TECHNOLOGIES.PHP],
     text: (
       <>
         <h2>Practical and usuable website</h2>
@@ -107,8 +112,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://n0llan.nu/",
-    next: "https://iare.one"
+    prev: "/projects/n0llan",
+    next: "/projects/iare"
   },
   iare: {
     title: "Iare",
@@ -117,6 +122,11 @@ export default {
     bannerGradient: greenBlue,
     slides: getImages("iare", 4),
     link: "https://iare.one/",
+    technologies: [
+      TECHNOLOGIES.WORDPRESS,
+      TECHNOLOGIES.PHP,
+      TECHNOLOGIES.MYSQL
+    ],
     text: (
       <>
         <h2>Practical and multi purpose</h2>
@@ -138,8 +148,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://dageni.se/",
-    next: "https://amitie.netlify.com/"
+    prev: "/projects/dagen-i",
+    next: "/projects/amitié"
   },
   n0llan: {
     title: "N0llan",
@@ -148,6 +158,11 @@ export default {
     bannerGradient: greenBlue,
     slides: getImages("n0llan", 3),
     link: "https://n0llan.nu/",
+    technologies: [
+      TECHNOLOGIES.WORDPRESS,
+      TECHNOLOGIES.PHP,
+      TECHNOLOGIES.MYSQL
+    ],
     text: (
       <>
         <h2>Intuitive and robust</h2>
@@ -165,8 +180,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://castelli.se/",
-    next: "https://dageni.se/"
+    prev: "/projects/castelli",
+    next: "/projects/dagen-i"
   },
   resorts: {
     title: "Beach Resorts",
@@ -175,6 +190,11 @@ export default {
     bannerGradient: purpleBlue,
     slides: getImages("resorts", 4),
     link: "https://rubenli-react-hotels.netlify.com/",
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.STYLED_COMPONENTS,
+      TECHNOLOGIES.CONTENTFUL
+    ],
     text: (
       <>
         <h2>Headless CMS and React</h2>
@@ -191,8 +211,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://soccio-e29bc.firebaseapp.com/",
-    next: "https://castelli.se/"
+    prev: "/projects/soccio",
+    next: "/projects/castelli"
   },
   soccio: {
     title: "Soccio",
@@ -201,6 +221,12 @@ export default {
     bannerGradient: redOrange,
     slides: getImages("soccio", 4),
     link: "https://soccio-e29bc.firebaseapp.com/",
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.REDUX,
+      TECHNOLOGIES.NODE,
+      TECHNOLOGIES.FIREBASE
+    ],
     text: (
       <>
         <h2>React/Node social media app</h2>
@@ -221,7 +247,7 @@ export default {
         </p>
       </>
     ),
-    prev: "https://amitie.netlify.com/",
-    next: "https://rubenli-react-hotels.netlify.com/"
+    prev: "/projects/amitié",
+    next: "/projects/resorts"
   }
 };

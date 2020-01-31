@@ -21,7 +21,12 @@ const hero = () => {
         I build beautiful <span className="rolling-text">{text}</span>
       </h2>
       <div className="buttons">
-        <Link to="/#projects">
+        <Link
+          to="/#projects"
+          onClick={() =>
+            document.body.querySelector("#projects").scrollIntoView()
+          }
+        >
           <button className="button-primary">View Portfolio</button>
         </Link>
         <Link to="/contact">

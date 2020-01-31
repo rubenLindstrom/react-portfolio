@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // Components
 import Slider from "../components/slider";
-import { Banner, GoBack } from "../components/atoms";
+import { Banner, GoBack, Technology } from "../components/atoms";
 
 import projects from "../models/projects";
 
@@ -21,7 +22,8 @@ const singleProject = props => {
     text,
     link,
     prev,
-    next
+    next,
+    technologies
   } = projects[projectKey];
 
   const sliderSettings = {
@@ -40,7 +42,15 @@ const singleProject = props => {
         <h3>{subtitle}</h3>
       </Banner>
       <div className="gray-section">
-        <div className="container">{text}</div>
+        <div className="container padded">
+          {text}
+          <h2 className="mt">Technologies used</h2>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {technologies.map(({ img, name }) => (
+              <Technology img={img} key={name} name={name} />
+            ))}
+          </div>
+        </div>
       </div>
       <div id="project-gallery">
         <div className="padded container">
@@ -59,14 +69,14 @@ const singleProject = props => {
       </div>
       <div className="projects-navigator">
         <div className="navigation-container">
-          <a href={prev} target="_blank" rel="noopener noreferrer">
+          <Link to={prev}>
             <FontAwesomeIcon icon={faArrowLeft} /> Prev Project
-          </a>
+          </Link>
         </div>
         <div className="navigation-container">
-          <a href={next} target="_blank" rel="noopener noreferrer">
+          <Link to={next}>
             Next Project <FontAwesomeIcon icon={faArrowRight} />
-          </a>
+          </Link>
         </div>
         <div className="gray-section">
           <button

@@ -39,6 +39,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.mt {
+  margin-top: 2.5rem;
+}
+
 .gray-section {
   background-color: #ededed;
   padding: 2rem 10px;
@@ -169,32 +173,6 @@ body {
     justify-items: center;
     row-gap: 2rem;
     max-width: 100%;
-
-    figure {
-      margin: 0;
-      height: 95px;
-      align-items: center;
-      display: flex;
-      position: relative;
-      img {
-        width: 70px;
-        cursor: pointer;
-        transition: 0.4s ease;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-      figcaption {
-        text-align: center;
-        font-size: 0.9rem;
-        font-weight: 700;
-        position: absolute;
-        top: 90%;
-        width: 100%;
-        color: #111;
-        margin-top: 1rem;
-      }
-    }
   }
 }
 
@@ -446,7 +424,7 @@ body {
 #project-gallery {
   .projects-slider {
     position: relative;
-    height: 250px;
+    height: 215px;
     margin-left: -10px;
   }
 }

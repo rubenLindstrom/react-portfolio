@@ -1,19 +1,16 @@
 import React from "react";
 
-import firebase from "../images/technologies/firebase.png";
-import js from "../images/technologies/js.png";
-import node from "../images/technologies/node.png";
-import react from "../images/technologies/react.png";
-import sass from "../images/technologies/sass.png";
-import wordpress from "../images/technologies/wordpress.png";
+import TECHNOLOGIES from "../models/technologies";
+
+import { Technology } from "./atoms";
 
 const techs = [
-  { img: firebase, name: "Firebase" },
-  { img: js, name: "JS" },
-  { img: node, name: "Node" },
-  { img: react, name: "React" },
-  { img: sass, name: "Sass" },
-  { img: wordpress, name: "Wordpress" }
+  TECHNOLOGIES.FIREBASE,
+  TECHNOLOGIES.JS,
+  TECHNOLOGIES.NODE,
+  TECHNOLOGIES.REACT,
+  TECHNOLOGIES.SASS,
+  TECHNOLOGIES.WORDPRESS
 ];
 
 const technologies = () => {
@@ -22,10 +19,7 @@ const technologies = () => {
       <h2>Some of the technologies we use</h2>
       <div className="tech-grid">
         {techs.map(({ img, name }) => (
-          <figure key={name}>
-            <img src={img} alt={name} />
-            <figcaption>{name}</figcaption>
-          </figure>
+          <Technology key={name} img={img} name={name} />
         ))}
       </div>
     </div>
