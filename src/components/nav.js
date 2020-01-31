@@ -23,7 +23,6 @@ const Nav = () => {
       </div>
       <div id="nav-content" className={open ? "open" : ""}>
         <ul>
-          {/* TODO: Fix active class */}
           <li className="active">
             <Link onClick={() => setOpen(false)} to="/">
               Home

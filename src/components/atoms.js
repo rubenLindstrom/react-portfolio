@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,15 +32,51 @@ export const SocialLinks = () => (
   </div>
 );
 
-export const ContactForm = () => (
-  <form className="contact-form">
-    <input type="text" name="name" placeholder="Name" />
-    <input type="text" name="email" placeholder="Email Address" />
-    <input type="text" name="budget" placeholder="Budget (Optional)" />
-    <textarea placeholder="Describe your project..."></textarea>
-    <button>Send Inquiry</button>
-  </form>
-);
+export const ContactForm = () => {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const budgetRef = useRef(null);
+  const textRef = useRef(null);
+
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    [nameRef, emailRef, budgetRef, textRef].forEach(
+      ref => (ref.current.value = "")
+    );
+    setHasSubmitted(true);
+  };
+
+  return (
+    <form
+      className="contact-form"
+      onSubmit={handleSubmit}
+      onClick={() => setHasSubmitted(false)}
+    >
+      <input ref={nameRef} type="text" name="name" placeholder="Name" />
+      <input
+        ref={emailRef}
+        type="text"
+        name="email"
+        placeholder="Email Address"
+      />
+      <input
+        ref={budgetRef}
+        type="text"
+        name="budget"
+        placeholder="Budget (Optional)"
+      />
+      <textarea ref={textRef} placeholder="Describe your project..."></textarea>
+      <button>Send Inquiry</button>
+      {hasSubmitted && (
+        <p style={{ color: "green" }}>
+          Thanks for your inquiry! We'll get back to you shortly
+        </p>
+      )}
+    </form>
+  );
+};
 
 export const Banner = ({ bg, slim, children }) => (
   <div

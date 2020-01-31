@@ -77,7 +77,10 @@ nav {
 
 @media only screen and (min-width: $tablet) {
   nav {
-    padding: 0 15%;
+    .bar-wrapper,
+    #nav-content {
+      padding: 0 15%;
+    }
 
     h1 {
       font-size: 2rem;

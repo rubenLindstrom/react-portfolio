@@ -1,6 +1,8 @@
 $active: #ff177f;
 
 $tablet: 768px;
+$desktop: 992px;
+$largeDesktop: 1200px;
 
 $redOrange: linear-gradient(
   135deg,
@@ -13,8 +15,18 @@ $purpleBlue: linear-gradient(
   rgba(148, 0, 222, 0.8),
   rgba(0, 176, 235, 0.8)
 );
+
 $greenBlue: linear-gradient(
   135deg,
   rgba(0, 222, 96, 0.8),
   rgba(0, 188, 235, 0.8)
 );
+
+$red: rgba(222, 0, 63, 0.8);
+$orange: rgba(235, 74, 0, 0.8);
+
+$purple: rgba(148, 0, 222, 0.8);
+$darkBlue: rgba(0, 176, 235, 0.8);
+
+$green: rgba(0, 222, 96, 0.8);
+$blue: rgba(0, 188, 235, 0.8);

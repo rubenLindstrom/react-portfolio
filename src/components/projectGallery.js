@@ -73,7 +73,7 @@ const projectGallery = () => {
   return (
     <div id="projects">
       <h2 className="spaced">Recent Projects</h2>
-      <div className="clearfix projects-grid">
+      <div className="projects-grid">
         {projects.map(({ bg, title, subtitle }, index) => (
           <Link
             key={title}
