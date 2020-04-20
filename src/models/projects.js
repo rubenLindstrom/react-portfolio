@@ -11,7 +11,7 @@ const greenBlue =
   " linear-gradient(135deg,  rgba(0, 222, 96, 0.8),  rgba(0, 188, 235,0.8))";
 
 const getImages = (title, number) =>
-  [...Array(number).keys()].map(num =>
+  [...Array(number).keys()].map((num) =>
     require(`../images/projects/${title}/${num + 1}.png`)
   );
 
@@ -22,7 +22,7 @@ export default {
     banner: require("../images/projects/amitie/main.jpg"),
     bannerGradient: redOrange,
     slides: getImages("amitie", 4),
-    link: "https://amitie.netlify.com/",
+    link: "https://amitie.netlify.app/",
     text: (
       <>
         <h2>Stunning graphics</h2>
@@ -42,8 +42,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://iare.one",
-    next: "https://soccio-e29bc.firebaseapp.com/"
+    prev: "keeps",
+    next: "resorts",
   },
 
   castelli: {
@@ -77,8 +77,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://rubenli-react-hotels.netlify.com/",
-    next: "https://n0llan.nu/"
+    prev: "resorts",
+    next: "n0llan",
   },
   ["dagen-i"]: {
     title: "Dagen I",
@@ -107,9 +107,10 @@ export default {
         </p>
       </>
     ),
-    prev: "https://n0llan.nu/",
-    next: "https://iare.one"
+    prev: "n0llan",
+    next: "iare",
   },
+
   iare: {
     title: "Iare",
     subtitle: "Practical all-in-one website, used by hundreds of students",
@@ -138,9 +139,36 @@ export default {
         </p>
       </>
     ),
-    prev: "https://dageni.se/",
-    next: "https://amitie.netlify.com/"
+    prev: "dagen-i",
+    next: "soccio",
   },
+
+  keeps: {
+    title: "Keeps",
+    subtitle: "Social notekeeping app, for sharing what's worth remembering",
+    banner: require("../images/projects/keeps/main.png"),
+    bannerGradient: greenBlue,
+    slides: getImages("keeps", 2),
+    link: "https://keeps-81a16.firebaseapp.com/login",
+    text: (
+      <>
+        <h2>Smooth and easy to navigate</h2>
+        <p>
+          Wanteing to build a more complex web app, I decided to go for a note
+          keeping app that allows the sharing of notes. The idea is to bring the
+          best of google docs and google keep, and bring them together.
+          <br />
+          <br />
+          Through a very easy sharing system, it is possible to share and
+          collaborate on notes. The feature-rich RTE allows for bullet lists,
+          images, code-formatting and much much more.
+        </p>
+      </>
+    ),
+    prev: "omniweather",
+    next: "amitié",
+  },
+
   n0llan: {
     title: "N0llan",
     subtitle: "Information hub and event-system",
@@ -165,16 +193,43 @@ export default {
         </p>
       </>
     ),
-    prev: "https://castelli.se/",
-    next: "https://dageni.se/"
+    prev: "castelli",
+    next: "dagen-i",
   },
+
+  omniweather: {
+    title: "OmniWeather",
+    subtitle: "Dynamic real time weather app with scenic images",
+    banner: require("../images/projects/omni-weather/main.jpg"),
+    bannerGradient: purpleBlue,
+    slides: getImages("omni-weather", 4),
+    link: "https://omniweather.netlify.app/",
+    text: (
+      <>
+        <h2>Easy and fun</h2>
+        <p>
+          Trying out some new technologies, I wanted to put it in practice with
+          a nice and simple application, that despite it's simplicity could be
+          some fun to play with.
+          <br />
+          <br />
+          The purpose of the weather app is to get info about current weather
+          conditions, updated in real time, while also displaying highly rated
+          images as the background.
+        </p>
+      </>
+    ),
+    prev: "soccio",
+    next: "keeps",
+  },
+
   resorts: {
     title: "Beach Resorts",
     subtitle: "React and headless CMS for hotel showcase",
     banner: require("../images/projects/resorts/main.jpg"),
     bannerGradient: purpleBlue,
     slides: getImages("resorts", 4),
-    link: "https://rubenli-react-hotels.netlify.com/",
+    link: "https://rubenli-react-hotels.netlify.app/",
     text: (
       <>
         <h2>Headless CMS and React</h2>
@@ -191,8 +246,8 @@ export default {
         </p>
       </>
     ),
-    prev: "https://soccio-e29bc.firebaseapp.com/",
-    next: "https://castelli.se/"
+    prev: "amité",
+    next: "castelli",
   },
   soccio: {
     title: "Soccio",
@@ -221,7 +276,7 @@ export default {
         </p>
       </>
     ),
-    prev: "https://amitie.netlify.com/",
-    next: "https://rubenli-react-hotels.netlify.com/"
-  }
+    prev: "iare",
+    next: "omniweather",
+  },
 };

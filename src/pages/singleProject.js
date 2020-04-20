@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +9,7 @@ import { Banner, GoBack } from "../components/atoms";
 
 import projects from "../models/projects";
 
-const singleProject = props => {
+const singleProject = (props) => {
   const projectKey = props.match.params.project;
 
   // TODO: Project not found
@@ -21,15 +22,15 @@ const singleProject = props => {
     text,
     link,
     prev,
-    next
+    next,
   } = projects[projectKey];
 
   const sliderSettings = {
     slideDuration: 4000,
-    slides: slides.map(slide => ({
-      bg: `url(${slide})`
+    slides: slides.map((slide) => ({
+      bg: `url(${slide})`,
     })),
-    arrows: true
+    arrows: true,
   };
 
   return (
@@ -59,14 +60,14 @@ const singleProject = props => {
       </div>
       <div className="projects-navigator">
         <div className="navigation-container">
-          <a href={prev} target="_blank" rel="noopener noreferrer">
+          <Link to={`/projects/${prev}`} rel="noopener noreferrer">
             <FontAwesomeIcon icon={faArrowLeft} /> Prev Project
-          </a>
+          </Link>
         </div>
         <div className="navigation-container">
-          <a href={next} target="_blank" rel="noopener noreferrer">
+          <Link to={`/projects/${next}`} rel="noopener noreferrer">
             Next Project <FontAwesomeIcon icon={faArrowRight} />
-          </a>
+          </Link>
         </div>
         <div className="gray-section">
           <button

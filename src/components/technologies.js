@@ -1,20 +1,6 @@
 import React from "react";
 
-import firebase from "../images/technologies/firebase.png";
-import js from "../images/technologies/js.png";
-import node from "../images/technologies/node.png";
-import react from "../images/technologies/react.png";
-import sass from "../images/technologies/sass.png";
-import wordpress from "../images/technologies/wordpress.png";
-
-const techs = [
-  { img: firebase, name: "Firebase" },
-  { img: js, name: "JS" },
-  { img: node, name: "Node" },
-  { img: react, name: "React" },
-  { img: sass, name: "Sass" },
-  { img: wordpress, name: "Wordpress" }
-];
+import techs from "../models/technologies";
 
 const technologies = () => {
   return (

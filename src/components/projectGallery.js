@@ -22,51 +22,70 @@ import n0llanImg from "../images/projects/n0llan/1.png";
 import soccioMain from "../images/projects/soccio/main.jpg";
 import soccioImg from "../images/projects/soccio/1.png";
 
+import omniWeatherMain from "../images/projects/omni-weather/main.jpg";
+import omniWeather from "../images/projects/omni-weather/1.png";
+
+import keepsMain from "../images/projects/keeps/main.png";
+import keeps from "../images/projects/keeps/1.png";
+
 const projects = [
-  {
-    bg: amitieiMain,
-    img: amitieImg,
-    title: "Amitié",
-    subtitle: "React application with 16.8 custom hooks-api"
-  },
   {
     bg: soccioMain,
     img: soccioImg,
     title: "Soccio",
     subtitle:
-      "Fullstack React / Node app with hosting and cloudfunctions from Firebase"
+      "Fullstack React / Node app, hosting and cloud-functions from Firebase",
+  },
+  {
+    bg: omniWeatherMain,
+    img: omniWeather,
+    title: "OmniWeather",
+    subtitle:
+      "TypeScript React app, connected to OpenWeatherData and Unsplash API",
+  },
+  {
+    bg: keepsMain,
+    img: keeps,
+    title: "Keeps",
+    subtitle: "Full stack React / Node app, dynamic note sharing with Firebase",
+  },
+  {
+    bg: amitieiMain,
+    img: amitieImg,
+    title: "Amitié",
+    subtitle: "React application with 16.8 custom hooks-api",
   },
 
   {
     bg: resortsMain,
     img: resortsImg,
     title: "Resorts",
-    subtitle: "React site integrated with headless CMS"
+    subtitle: "React site integrated with headless CMS",
   },
   {
     bg: castelliMain,
     img: castelliImg,
     title: "Castelli",
-    subtitle: "Wordpress-site for showcase of luxurious homes"
+    subtitle: "Wordpress-site for showcase of luxurious homes",
   },
   {
     bg: n0llanMain,
     img: n0llanImg,
     title: "n0llan",
-    subtitle: "Wordpress site with custom backend for event management"
+    subtitle: "Wordpress site with custom backend for event management",
   },
   {
     bg: dageniMain,
     img: dageniImg,
     title: "Dagen-I",
-    subtitle: "Wordpress site for company/student-event"
+    subtitle: "Wordpress site for company/student-event",
   },
   {
     bg: iareMain,
     img: iareImg,
     title: "Iare",
-    subtitle: "Wordpress site for a big organisation"
-  }
+    subtitle: "Wordpress site for a big organisation",
+  },
 ];
 
 const projectGallery = () => {
