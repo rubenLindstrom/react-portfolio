@@ -1,5 +1,7 @@
 import React from "react";
 
+import TECHNOLOGIES from "./technologies";
+
 // Gradients
 const redOrange =
   "linear-gradient(135deg,rgba(222, 0, 63, 0.8),  rgba(235, 74, 0, 0.8))";
@@ -21,6 +23,7 @@ export default {
     subtitle: "Showcase website for luxurious restaurant",
     banner: require("../images/projects/amitie/main.jpg"),
     bannerGradient: redOrange,
+    technologies: [TECHNOLOGIES.JS, TECHNOLOGIES.REACT, TECHNOLOGIES.SASS],
     slides: getImages("amitie", 4),
     link: "https://amitie.netlify.app/",
     text: (
@@ -53,6 +56,7 @@ export default {
     bannerGradient: purpleBlue,
     slides: getImages("castelli", 4),
     link: "https://castelli.se",
+    technologies: [TECHNOLOGIES.WORDPRESS, TECHNOLOGIES.PHP],
     text: (
       <>
         <h2>A brand new look</h2>
@@ -87,6 +91,7 @@ export default {
     bannerGradient: greenBlue,
     slides: getImages("dageni", 3),
     link: "https://dageni.se/",
+    technologies: [TECHNOLOGIES.WORDPRESS, TECHNOLOGIES.PHP],
     text: (
       <>
         <h2>Practical and usuable website</h2>
@@ -118,6 +123,11 @@ export default {
     bannerGradient: greenBlue,
     slides: getImages("iare", 4),
     link: "https://iare.one/",
+    technologies: [
+      TECHNOLOGIES.WORDPRESS,
+      TECHNOLOGIES.PHP,
+      TECHNOLOGIES.MYSQL,
+    ],
     text: (
       <>
         <h2>Practical and multi purpose</h2>
@@ -149,6 +159,12 @@ export default {
     banner: require("../images/projects/keeps/main.png"),
     bannerGradient: greenBlue,
     slides: getImages("keeps", 2),
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.NODE,
+      TECHNOLOGIES.FIREBASE,
+      TECHNOLOGIES.JS,
+    ],
     link: "https://keeps-81a16.firebaseapp.com/login",
     text: (
       <>
@@ -176,6 +192,11 @@ export default {
     bannerGradient: greenBlue,
     slides: getImages("n0llan", 3),
     link: "https://n0llan.nu/",
+    technologies: [
+      TECHNOLOGIES.WORDPRESS,
+      TECHNOLOGIES.PHP,
+      TECHNOLOGIES.MYSQL,
+    ],
     text: (
       <>
         <h2>Intuitive and robust</h2>
@@ -203,6 +224,11 @@ export default {
     banner: require("../images/projects/omni-weather/main.jpg"),
     bannerGradient: purpleBlue,
     slides: getImages("omni-weather", 4),
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.TYPESCRIPT,
+      TECHNOLOGIES.SASS,
+    ],
     link: "https://omniweather.netlify.app/",
     text: (
       <>
@@ -228,6 +254,11 @@ export default {
     subtitle: "React and headless CMS for hotel showcase",
     banner: require("../images/projects/resorts/main.jpg"),
     bannerGradient: purpleBlue,
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.JS,
+      TECHNOLOGIES.CONTENTFUL,
+    ],
     slides: getImages("resorts", 4),
     link: "https://rubenli-react-hotels.netlify.app/",
     text: (
@@ -256,6 +287,12 @@ export default {
     bannerGradient: redOrange,
     slides: getImages("soccio", 4),
     link: "https://soccio-e29bc.firebaseapp.com/",
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.REDUX,
+      TECHNOLOGIES.NODE,
+      TECHNOLOGIES.FIREBASE,
+    ],
     text: (
       <>
         <h2>React/Node social media app</h2>

@@ -1,6 +1,17 @@
 import React from "react";
 
-import techs from "../models/technologies";
+import TECHNOLOGIES from "../models/technologies";
+
+import { Technology } from "./atoms";
+
+const techs = [
+  TECHNOLOGIES.FIREBASE,
+  TECHNOLOGIES.JS,
+  TECHNOLOGIES.NODE,
+  TECHNOLOGIES.REACT,
+  TECHNOLOGIES.SASS,
+  TECHNOLOGIES.WORDPRESS,
+];
 
 const technologies = () => {
   return (
@@ -8,10 +19,7 @@ const technologies = () => {
       <h2>Some of the technologies we use</h2>
       <div className="tech-grid">
         {techs.map(({ img, name }) => (
-          <figure key={name}>
-            <img src={img} alt={name} />
-            <figcaption>{name}</figcaption>
-          </figure>
+          <Technology key={name} img={img} name={name} />
         ))}
       </div>
     </div>

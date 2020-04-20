@@ -1,21 +1,58 @@
-import firebase from "../images/technologies/firebase.png";
-import js from "../images/technologies/js.png";
-import node from "../images/technologies/node.png";
-import react from "../images/technologies/react.png";
-import sass from "../images/technologies/sass.png";
-import jest from "../images/technologies/jest.png";
-import typescript from "../images/technologies/typescript.png";
-import wordpress from "../images/technologies/wordpress.png";
-import html from "../images/technologies/html.png";
-
-export default [
-  { img: js, name: "JavaScript" },
-  { img: react, name: "React" },
-  { img: node, name: "Node" },
-  { img: jest, name: "Jest" },
-  { img: firebase, name: "Firebase" },
-  { img: sass, name: "Sass" },
-  { img: typescript, name: "TypeScript" },
-  { img: wordpress, name: "Wordpress" },
-  { img: html, name: "HTML" },
-];
+export default {
+  JEST: {
+    img: require("../images/technologies/jest.png"),
+    name: "Jest",
+  },
+  HTML: {
+    img: require("../images/technologies/html.png"),
+    name: "HTML",
+  },
+  TYPESCRIPT: {
+    img: require("../images/technologies/typescript.png"),
+    name: "TypeScript",
+  },
+  NODE: {
+    img: require("../images/technologies/node.png"),
+    name: "Node",
+  },
+  FIREBASE: {
+    img: require("../images/technologies/firebase.png"),
+    name: "Firebase",
+  },
+  JS: {
+    img: require("../images/technologies/js.png"),
+    name: "JS",
+  },
+  WORDPRESS: {
+    img: require("../images/technologies/wordpress.png"),
+    name: "Wordpress",
+  },
+  MYSQL: {
+    img: require("../images/technologies/mysql.png"),
+    name: "MySql",
+  },
+  SASS: {
+    img: require("../images/technologies/sass.png"),
+    name: "Sass",
+  },
+  REACT: {
+    img: require("../images/technologies/react.png"),
+    name: "React",
+  },
+  REDUX: {
+    img: require("../images/technologies/redux.png"),
+    name: "Redux",
+  },
+  PHP: {
+    img: require("../images/technologies/php.png"),
+    name: "php",
+  },
+  STYLED_COMPONENTS: {
+    img: require("../images/technologies/styledComponents.png"),
+    name: "Styled Components",
+  },
+  CONTENTFUL: {
+    img: require("../images/technologies/contentful.png"),
+    name: "Contentful",
+  },
+};

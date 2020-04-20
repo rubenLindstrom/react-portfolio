@@ -298,6 +298,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.mt {
+  margin-top: 2.5rem;
+}
+
 .gray-section {
   background-color: #ededed;
   padding: 2rem 10px;
@@ -444,41 +448,6 @@ body {
   justify-items: center;
   row-gap: 2rem;
   max-width: 100%;
-}
-
-#technologies .tech-grid figure {
-  margin: 0;
-  height: 95px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-#technologies .tech-grid figure img {
-  width: 70px;
-  cursor: pointer;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-}
-
-#technologies .tech-grid figure img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-#technologies .tech-grid figure figcaption {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 700;
-  position: absolute;
-  top: 90%;
-  width: 100%;
-  color: #111;
-  margin-top: 1rem;
 }
 
 #projects h2 {
@@ -724,7 +693,7 @@ body {
 
 #project-gallery .projects-slider {
   position: relative;
-  height: 250px;
+  height: 215px;
   margin-left: -10px;
 }
 

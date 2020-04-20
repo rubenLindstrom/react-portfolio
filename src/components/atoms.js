@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -95,4 +96,43 @@ export const GoBack = ({ to, path }) => (
       <FontAwesomeIcon icon={faHandPointLeft} /> Back to {to}
     </div>
   </Link>
+);
+
+const TechFig = styled.figure`
+  margin: 0;
+  margin-right: 1rem;
+  height: 95px;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+
+    img {
+      width: 70px;
+      cursor: pointer;
+      transition: 0.4s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      position: absolute;
+      top: 90%;
+      width: 100%;
+      color: #111;
+      margin-top: 1rem;
+    }
+  }
+`;
+
+export const Technology = ({ img, name }) => (
+  <div style={{ display: "inline-block" }}>
+    <TechFig key={name}>
+      <img src={img} alt={name} />
+      <figcaption>{name}</figcaption>
+    </TechFig>
+  </div>
 );
