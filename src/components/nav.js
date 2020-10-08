@@ -9,7 +9,7 @@ const Nav = () => {
     <nav>
       <div className="bar-wrapper">
         <Link to="/">
-          <h1>littleweb</h1>
+          <h1>CodeJoy AB</h1>
         </Link>
         <div
           id="hamburger"
