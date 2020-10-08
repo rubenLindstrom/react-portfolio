@@ -11,7 +11,7 @@ const Slider = ({ slideDuration, slides, arrows }) => {
       setCurrentIndex(prevState => (prevState + 1) % slides.length);
     }, slideDuration);
     return () => clearTimeout(timeout);
-  }, [currentIndex]);
+  }, [currentIndex, slideDuration, slides.length]);
 
   return (
     <div className="slider">

@@ -8,7 +8,7 @@ import ContactMe from "../components/contact";
 const Home = props => {
   useEffect(() => {
     if (props.location.hash) window.location.href = props.location.hash;
-  }, []);
+  }, [props.location.hash]);
 
   return (
     <>

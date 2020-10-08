@@ -17,6 +17,8 @@ const getImages = (title, number) =>
     require(`../images/projects/${title}/${num + 1}.png`)
   );
 
+const dagenI = "dagen-i";
+
 export default {
   amitié: {
     title: "Amitié",
@@ -84,7 +86,7 @@ export default {
     prev: "resorts",
     next: "n0llan",
   },
-  ["dagen-i"]: {
+  [dagenI]: {
     title: "Dagen I",
     subtitle: "Enabling students and employers to meet",
     banner: require("../images/projects/dageni/main.jpg"),
