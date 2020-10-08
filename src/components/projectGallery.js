@@ -10,8 +10,8 @@ import castelliImg from "../images/projects/castelli/1.png";
 import dageniMain from "../images/projects/dageni/main.jpg";
 import dageniImg from "../images/projects/dageni/1.png";
 
-import iareMain from "../images/projects/iare/main.jpg";
-import iareImg from "../images/projects/iare/1.png";
+import sambyggMain from "../images/projects/sambygg/main.jpg";
+import sambyggImg from "../images/projects/sambygg/1.png";
 
 import resortsMain from "../images/projects/resorts/main.jpg";
 import resortsImg from "../images/projects/resorts/1.png";
@@ -81,9 +81,9 @@ const projects = [
     subtitle: "Wordpress site for company/student-event",
   },
   {
-    bg: iareMain,
-    img: iareImg,
-    title: "Iare",
+    bg: sambyggMain,
+    img: sambyggImg,
+    title: "sambygg",
     subtitle: "Wordpress site for a big organisation",
   },
 ];

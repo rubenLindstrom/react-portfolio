@@ -113,16 +113,16 @@ export default {
       </>
     ),
     prev: "n0llan",
-    next: "iare",
+    next: "sambygg",
   },
 
-  iare: {
-    title: "Iare",
+  sambygg: {
+    title: "Samhällsbyggnad",
     subtitle: "Practical all-in-one website, used by hundreds of students",
-    banner: require("../images/projects/iare/main.jpg"),
+    banner: require("../images/projects/sambygg/main.jpg"),
     bannerGradient: greenBlue,
-    slides: getImages("iare", 4),
-    link: "https://iare.one/",
+    slides: getImages("sambygg", 3),
+    link: "http://s-sektionen.se/",
     technologies: [
       TECHNOLOGIES.WORDPRESS,
       TECHNOLOGIES.PHP,
@@ -132,20 +132,14 @@ export default {
       <>
         <h2>Practical and multi purpose</h2>
         <p>
-          The chapter of industrial engineering and management features many
+          The chapter of Civil Engineering features many
           subgroups, that all have their seperate activities and information
-          that needs to be spread. Together with this, there also needed to be a
-          system to handle payments and to sign up for events.
+          that needs to be spread.
           <br />
           <br />
           To enable easy administration, Wordpress was used, and a complete
-          custom backend system in php to handle events was written. This was
-          also integrated with Dibs payment system to handle payments.
+          custom backend system in php to handle events, ads, associations and alumni was developed.
           <br />
-          <br />
-          The system was iteratively upgraded with new systems, such as a new
-          interface to handle payments, since the one Dibs provided was not
-          appropriate for the needs of the chapter's cashier.
         </p>
       </>
     ),
@@ -313,7 +307,7 @@ export default {
         </p>
       </>
     ),
-    prev: "iare",
+    prev: "sambygg",
     next: "omniweather",
   },
 };
