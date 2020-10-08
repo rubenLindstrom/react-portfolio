@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import axios from "axios";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -43,10 +44,30 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    [nameRef, emailRef, budgetRef, textRef].forEach(
-      ref => (ref.current.value = "")
-    );
-    setHasSubmitted(true);
+    axios({
+      method: "POST", 
+      url:"http://littleweb.se/form.php", 
+      data: {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        budget: budgetRef.current.value,
+        message: textRef.current.value,
+      }
+    }).then((response)=>{
+      if (response.data.status === 'success') {
+        alert("Message Sent."); 
+        this.resetForm()
+      } else if (response.data.status === 'fail') {
+        alert("Message failed to send.")
+      }
+
+      [nameRef, emailRef, budgetRef, textRef].forEach(
+        ref => (ref.current.value = "")
+      );
+      setHasSubmitted(true);
+    })
+
+
   };
 
   return (
